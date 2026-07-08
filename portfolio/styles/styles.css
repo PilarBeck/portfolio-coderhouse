@@ -1,0 +1,261 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+   VARIABLES
+========================== */
+
+:root{
+
+    --background:#F5F3EF;
+    --surface:#FFFFFF;
+
+    --text:#4F4943;
+    --text-secondary:#857B73;
+
+    --accent:#A6785C;
+
+}
+
+/* ==========================
+   GENERAL
+========================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Geist",sans-serif;
+    background:var(--background);
+    color:var(--text);
+    line-height:1.6;
+
+}
+
+/* ==========================
+   TYPOGRAPHY
+========================== */
+
+h1{
+
+    font-size:3.5rem;
+    font-weight:700;
+
+}
+
+h2{
+
+    font-size:2rem;
+    font-weight:600;
+    margin-bottom:20px;
+
+}
+
+h3{
+
+    font-size:1.4rem;
+    margin-bottom:10px;
+
+}
+
+p{
+
+    font-size:1rem;
+    color:var(--text-secondary);
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+
+    padding:50px 40px;
+    text-align:center;
+
+}
+
+header h1{
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+nav ul{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    list-style:none;
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--accent);
+
+}
+
+/* ==========================
+   MAIN
+========================== */
+
+main{
+
+    max-width:1000px;
+    margin:auto;
+    padding:60px 30px;
+
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+section{
+
+    margin-bottom:80px;
+
+}
+
+article{
+
+    max-width:700px;
+    margin:auto;
+
+}
+
+/* ==========================
+   PROJECTS
+========================== */
+
+article{
+
+    max-width:700px;
+    margin:0 auto 60px;
+    background:var(--surface);
+    padding:24px;
+    border-radius:16px;
+
+}
+
+article figure{
+
+    margin-top:20px;
+
+}
+
+article img{
+
+    width:100%;
+    border-radius:12px;
+
+}
+
+
+/* ==========================
+   FIGURES
+========================== */
+
+figure{
+
+    margin-top:30px;
+
+}
+
+figure img{
+
+    width:100%;
+    max-width:650px;
+    border-radius:16px;
+    display:block;
+
+}
+
+figcaption{
+
+    margin-top:10px;
+    font-size:.9rem;
+    color:var(--text-secondary);
+
+}
+
+/* ==========================
+   LISTS
+========================== */
+
+ul{
+
+    padding-left:25px;
+
+}
+
+li{
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    border-top:1px solid #dddddd;
+    text-align:center;
+    padding:40px;
+
+}
+
+footer p{
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.5rem;
+    }
+    nav ul{
+
+        flex-direction:column;
+        align-items:center;
+
+    }
+
+    main{
+
+        padding:40px 20px;
+    }
+
+}

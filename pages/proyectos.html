@@ -4,96 +4,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
     <link rel="stylesheet" href="../styles/styles.css">
+
     <title>Projects | Pilar Beckman</title>
-    
 </head>
 
 <body>
 
-<header>
+    <header>
 
-        <h1 class="logo">PB</h1>
+        <nav class="navbar navbar-expand-lg">
 
+            <div class="container">
 
-<nav>
-    <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="sobre-mi.html">About Me</a></li>
-        <li><a href="proyectos.html">Projects</a></li>
-        <li><a href="servicios.html">Services</a></li>
-        <li><a href="contacto.html">Contact</a></li>
-    </ul>
-</nav>
+                <!-- LOGO -->
+                <a class="navbar-brand" href="../index.html">
+                    PB
+                </a>
 
-</header>
+                <!-- BOTÓN HAMBURGUESA -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
 
-<main>
+                    <span class="navbar-toggler-icon"></span>
 
-    <section class="projects">
+                </button>
 
-<h1>Projects</h1>
+                <!-- MENÚ -->
+                <div class="collapse navbar-collapse" id="navbarNav">
 
-<p>
-Here are some of the UX/UI and web development projects I have worked on.
-</p>
+                    <ul class="navbar-nav ms-auto">
 
-<div class="projects-container">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                Home
+                            </a>
+                        </li>
 
-<article class="project-card">
+                        <li class="nav-item">
+                            <a class="nav-link" href="proyectos.html">
+                                Projects
+                            </a>
+                        </li>
 
-<h2>ARQA Furniture</h2>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre-mi.html">
+                                About
+                            </a>
+                        </li>
 
-<p>
-Website and e-commerce experience for a furniture brand.
-</p>
-<figure>
-<img src="../images/arqa.jpg" alt="Homepage of ARQA Furniture website">
-</figure>
-</article>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">
+                                Services
+                            </a>
+                        </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">
+                                Contact
+                            </a>
+                        </li>
 
-<article class="project-card">
+                    </ul>
 
-<h2>Salud Clara</h2>
+                </div>
 
-<p>
-Mobile application designed to improve healthcare accessibility for older adults.
-</p>
-<figure>
-<img src="../images/saludclara.jpg" alt="Salud Clara mobile application">
-</figure>
-</article>
+            </div>
 
+        </nav>
 
-<article class="project-card">
+    </header>
 
-<h2>PedidosYa Portal</h2>
+    <main>
 
-<p>
-UX/UI redesign focused on improving the experience of merchants and supermarkets.
-</p>
-<figure>
-<img src="../images/pedidosya.jpg" alt="PedidosYa Portal redesign">
-</figure>
-</article>
+        <section class="projects">
 
-</div>
+            <h1>Projects</h1>
 
-</section>
+            <p>
+                Here are some of the UX/UI and web development projects I have worked on.
+            </p>
 
-</main>
+            <div class="projects-container">
 
-<footer>
+                <article class="project-card">
 
-    <p>
-        © 2026 Pilar Beckman. All rights reserved.
-    </p>
+                    <h2>ARQA Furniture</h2>
 
+                    <p>
+                        Website and e-commerce experience for a furniture brand.
+                    </p>
 
+                    <figure>
+                        <img
+                            src="../images/arqa.jpg"
+                            alt="Homepage of ARQA Furniture website">
+                    </figure>
+
+                </article>
+
+                <article class="project-card">
+
+                    <h2>Salud Clara</h2>
+
+                    <p>
+                        Mobile application designed to improve healthcare accessibility for older adults.
+                    </p>
+
+                    <figure>
+                        <img
+                            src="../images/saludclara.jpg"
+                            alt="Salud Clara mobile application">
+                    </figure>
+
+                </article>
+
+                <article class="project-card">
+
+                    <h2>PedidosYa Portal</h2>
+
+                    <p>
+                        UX/UI redesign focused on improving the experience of merchants and supermarkets.
+                    </p>
+
+                    <figure>
+                        <img
+                            src="../images/pedidosya.jpg"
+                            alt="PedidosYa Portal redesign">
+                    </figure>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 Pilar Beckman. All rights reserved.
+        </p>
 
         <ul>
 
@@ -111,9 +179,9 @@ UX/UI redesign focused on improving the experience of merchants and supermarkets
 
         </ul>
 
+    </footer>
 
-
-</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

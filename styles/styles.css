@@ -1,26 +1,26 @@
-
 /* ============================
    RESET
 ============================ */
-    * {
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 /* ============================
    VARIABLES
 ============================ */
 
 :root {
-
     --background: #0F172A;
     --surface: #1E293B;
     --text: #F8FAFC;
     --text-secondary: #94A3B8;
     --accent: #A78BFA;
-
 }
+
 
 /* ============================
    CONFIGURACIÓN GENERAL
@@ -31,130 +31,114 @@ html {
 }
 
 body {
-
     font-family: "Geist", sans-serif;
     background: var(--background);
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
-
 }
-
 
 
 /* ============================
    HEADER
 ============================ */
 
-
 header {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 24px 8%;
     position: relative;
     z-index: 5;
-
 }
 
-.logo {
+.navbar {
+    padding: 24px 0;
+}
 
+.navbar-brand {
+    color: var(--text);
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: -0.5px;
-
 }
 
-header nav ul {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    list-style: none;
-
-}
-
-header nav a {
-
-    text-decoration: none;
+.nav-link {
     color: var(--text);
     font-weight: 500;
-    transition: .3s;
-
+    transition: 0.3s;
 }
 
-
-header nav a:hover {
-
+.nav-link:hover,
+.nav-link:focus {
     color: var(--accent);
-
 }
+
+.navbar-toggler {
+    border-color: var(--text);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
 
 /* ============================
    MAIN
 ============================ */
 
-
 main {
-
     position: relative;
     overflow: hidden;
-
-
 }
 
-/* ================= HOME GRID ================= */
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 80px 8%;
+    position: relative;
+    z-index: 2;
+}
 
-.home-grid{
 
-    display:grid;
+/* ============================
+   HOME - CSS GRID
+============================ */
 
-    grid-template-columns:1fr;
+.home-grid {
+    display: grid;
 
-        gap:20px;
+    grid-template-columns: 1fr;
 
     grid-template-areas:
-
         "hero"
         "featured"
         "about"
         "skills";
 
+    gap: 20px;
 }
+
 
 /* ============================
    GRID BACKGROUND
 ============================ */
 
-
 .grid-bg {
-
-
-    grid-area:1 / 1 / -1 / -1;
     position: absolute;
     inset: 0;
 
     background-image:
-
         linear-gradient(
-            rgba(255,255,255,.05) 1px,
+            rgba(255, 255, 255, 0.05) 1px,
             transparent 1px
         ),
-
         linear-gradient(
             90deg,
-            rgba(255,255,255,.05) 1px,
+            rgba(255, 255, 255, 0.05) 1px,
             transparent 1px
         );
 
     background-size: 50px 50px;
 
     z-index: 0;
-
 }
 
 
@@ -162,214 +146,96 @@ main {
    HERO
 ============================ */
 
-
 .hero {
-    grid-area:hero;
-    min-height:auto;
+    grid-area: hero;
+
+    min-height: auto;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding:40px 8%;
+
+    padding: 40px 8%;
+
     position: relative;
     overflow: hidden;
-
-
 }
-
 
 .hero article {
-
+    width: 100%;
     max-width: 650px;
+
     position: relative;
     z-index: 1;
-
 }
-
 
 .hero h1 {
-
-    font-size:clamp(2.3rem,6vw,4rem);
+    font-size: clamp(2.3rem, 6vw, 4rem);
     margin: 20px 0;
-
 }
 
-
 .tag {
-
     color: var(--accent);
     font-weight: 600;
     letter-spacing: 1px;
-
+    margin: 0;
+    font-size: 1rem;
 }
-
 
 .hero p {
-
     font-size: 1.2rem;
     max-width: 500px;
-
 }
 
-
-
 .glow {
-
     position: absolute;
 
     width: 700px;
     height: 700px;
 
-    background: #A78BFA;
+    background: var(--accent);
 
     border-radius: 50%;
 
     filter: blur(250px);
 
-    opacity: .25;
+    opacity: 0.25;
 
     top: 50px;
     right: -150px;
 
     z-index: 0;
-
 }
 
 
 /* ============================
-   SECCIONES GENERALES
+   TIPOGRAFÍA
 ============================ */
 
-
-section {
-
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    padding: 80px 8%;
-
-    position: relative;
-    z-index: 2;
-
-    margin-bottom: 0px;
-
+h1 {
+    font-size: 2.5rem;
 }
-
 
 h2 {
-
     font-size: 2rem;
     margin-bottom: 30px;
-
 }
-
 
 p {
-
     color: var(--text-secondary);
-
 }
 
 
 /* ============================
-   PROYECTO DESTACADO (INDEX)
+   BOTÓN
 ============================ */
-
-.featured-projects{
-
-    grid-area:featured;
-
-}
-
-.featured-projects article{
-
-    display:grid;
-
-    grid-template-columns:1fr;
-
-    gap:20px;
-
-    background:var(--surface);
-
-    padding:25px;
-
-    border-radius:16px;
-
-}
-
-
-
-figure img {
-
-    width: 100%;
-    border-radius: 12px;
-    display: block;
-
-}
-
-
-
-figcaption {
-
-    margin-top: 10px;
-    color: var(--text-secondary);
-
-}
-
-img{
-
-    max-width:100%;
-    height:auto;
-
-}
-
-/* ============================
-   SKILLS
-============================ */
-
-.skills{
-
-    grid-area:skills;
-
-}
-
-.skills ul {
-
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 15px;
-
-    list-style: none;
-
-}
-
-
-
-.skills li {
-
-    background: var(--surface);
-
-    padding: 10px 18px;
-
-    border-radius: 20px;
-
-}
-
-
-/* ============================
-   BOTONES
-============================ */
-
 
 .btn {
-
     display: inline-block;
 
     margin-top: 30px;
 
     background: var(--accent);
-
     color: #0F172A;
 
     padding: 14px 28px;
@@ -380,38 +246,192 @@ img{
 
     font-weight: 600;
 
-    transition: .3s;
-
+    transition: 0.3s;
 }
 
-
-
 .btn:hover {
-
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
 
+.btn:active {
+    transform: translateY(0);
 }
 
 
 /* ============================
-   FOOTER
+   PROYECTOS DESTACADOS - INDEX
 ============================ */
 
+.featured-projects {
+    grid-area: featured;
+}
+
+.featured-projects .row {
+    width: 100%;
+}
+
+.featured-projects article {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    background: var(--surface);
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    height: 100%;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 12px;
+
+    display: block;
+}
+
+figcaption {
+    margin-top: 10px;
+    color: var(--text-secondary);
+}
+
+
+/* ============================
+   ABOUT - HOME
+============================ */
+
+.about {
+    grid-area: about;
+}
+
+
+/* ============================
+   SKILLS
+============================ */
+
+.skills {
+    grid-area: skills;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    list-style: none;
+}
+
+.skills li {
+    background: var(--surface);
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+}
+
+
+/* ============================
+   PÁGINA PROJECTS
+============================ */
+
+.projects {
+    padding: 80px 8%;
+}
+
+.projects-container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    grid-template-areas:
+        "project1"
+        "project2"
+        "project3";
+}
+
+.project-card:nth-child(1) {
+    grid-area: project1;
+}
+
+.project-card:nth-child(2) {
+    grid-area: project2;
+}
+
+.project-card:nth-child(3) {
+    grid-area: project3;
+}
+
+.project-card {
+    background: var(--surface);
+
+    padding: 25px;
+
+    border-radius: 16px;
+}
+
+.project-card img {
+    width: 100%;
+
+    border-radius: 12px;
+}
+
+
+/* ============================
+   PÁGINA ABOUT
+============================ */
+
+.profile-photo {
+    max-width: 280px;
+    margin-top: 30px;
+}
+
+.profile-photo img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+/* ============================
+   PÁGINA SERVICES
+============================ */
+
+.service-photo {
+    max-width: 400px;
+    margin-top: 30px;
+}
+
+.service-photo img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+/* ============================
+   FOOTER - FLEXBOX
+============================ */
 
 footer {
-
-    border-top: 1px solid rgba(255,255,255,.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 
     text-align: center;
 
     padding: 40px;
-
 }
 
-
-
 footer ul {
-
     margin-top: 20px;
 
     display: flex;
@@ -421,218 +441,73 @@ footer ul {
     gap: 20px;
 
     list-style: none;
-
 }
 
-
-
 footer a {
-
     color: var(--text);
 
     font-size: 1.4rem;
-
 }
-
-
-
 
 
 /* ============================
-   PÁGINA PROYECTOS
+   TABLET
 ============================ */
 
-.projects{
+@media (min-width: 768px) {
 
-    padding-top:120px 8% 80px;
-
-}
-
-.projects-container{
-
-    display:grid;
-
-    grid-template-columns:1fr;
-
-    gap:30px;
-
-    grid-template-areas:
-        "project1"
-        "project2"
-        "project3";
-
-}
-
-.project-card:nth-child(1){
-    grid-area: project1;
-}
-
-.project-card:nth-child(2){
-    grid-area: project2;
-}
-
-.project-card:nth-child(3){
-    grid-area: project3;
-}
-
-
-
-.project-card {
-
-    background: var(--surface);
-
-    padding: 25px;
-
-    border-radius: 16px;
-
-
-}
-
-
-
-.project-card img {
-
-    width: 100%;
-
-    border-radius: 12px;
-
-}
-
-/* ============================
-   PÁGINA ABOUT
-============================ */
-
-.about{
-
-    grid-area:about;
-
-}
-
-.profile-photo {
-
-    max-width: 280px;
-    margin-top: 30px;
-
-}
-
-.profile-photo img {
-
-    width: 100%;
-    border-radius: 12px;
-
-}
-
-/* ============================
-   PÁGINA SERVICES
-============================ */
-
-.service-photo {
-
-    max-width: 400px;
-    margin-top: 30px;
-
-}
-
-.service-photo img {
-
-    width: 100%;
-    border-radius: 12px;
-
-}
-
-
-/* ================= TABLET ================= */
-
-@media (min-width:768px){
-
-    header {
-
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    height: 90px;
-
-    padding: 0 8%;
-
-}
-
-header nav ul {
-
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 35px;
-
-}
-
-    .hero{
-
-    min-height: calc(100vh - 90px);
-
-}
-
-    .hero h1{
-
-        font-size:3.2rem;
-
+    .hero {
+        min-height: calc(100vh - 90px);
     }
 
-    .projects-container{
+    .hero h1 {
+        font-size: 3.2rem;
+    }
 
-        grid-template-columns:repeat(2,1fr);
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
 
         grid-template-areas:
-
             "project1 project2"
             "project3 project3";
-
     }
 
-
 }
 
-/* ================= DESKTOP ================= */
 
-@media (min-width:1024px){
+/* ============================
+   DESKTOP
+============================ */
 
-    .home-grid{
+@media (min-width: 1024px) {
 
-    grid-template-columns:1fr 1fr;
-
-    grid-template-areas:
-
-        "hero hero"
-        "featured about"
-        "skills skills";
-
-    gap:30px;
-
-}
-
-    .hero h1{
-
-    font-size:clamp(2.5rem,6vw,4rem);
-
-}
-
-    .projects-container{
-
-        grid-template-columns:repeat(3,1fr);
+    .home-grid {
+        grid-template-columns: 1fr 1fr;
 
         grid-template-areas:
+            "hero hero"
+            "featured about"
+            "skills skills";
 
-            "project1 project2 project3";
-
+        gap: 30px;
     }
 
-    .featured-projects article{
+    .hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+    }
 
-    grid-template-columns:1fr 1fr;
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr);
 
-    align-items:center;
+        grid-template-areas:
+            "project1 project2 project3";
+    }
+
+    .featured-projects article {
+        grid-template-columns: 1fr 1fr;
+
+        align-items: center;
+    }
 
 }
 
-}

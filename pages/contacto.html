@@ -4,60 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
     <link rel="stylesheet" href="../styles/styles.css">
+
     <title>Contact | Pilar Beckman</title>
 </head>
 
 <body>
 
-<header>
+    <header>
 
-    <h1 class="logo">PB</h1>
+        <nav class="navbar navbar-expand-lg">
 
-<nav>
-    <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="sobre-mi.html">About Me</a></li>
-        <li><a href="proyectos.html">Projects</a></li>
-        <li><a href="servicios.html">Services</a></li>
-        <li><a href="contacto.html">Contact</a></li>
-    </ul>
-</nav>
+            <div class="container">
 
-</header>
+                <!-- LOGO -->
+                <a class="navbar-brand" href="../index.html">
+                    PB
+                </a>
 
-<main>
+                <!-- BOTÓN HAMBURGUESA -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
 
-<section>
-<article>
-    <h1>Contact</h1>
+                    <span class="navbar-toggler-icon"></span>
 
-    <p>
-        Feel free to contact me for collaborations, freelance work or job opportunities.
-    </p>
+                </button>
 
-    <p>
-        Email:
-        <a href="mailto:pilarnarb@gmail.com">
-            pilarnarb@gmail.com
-        </a>
-    </p>
+                <!-- MENÚ -->
+                <div class="collapse navbar-collapse" id="navbarNav">
 
-</article>
-</section>
+                    <ul class="navbar-nav ms-auto">
 
-</main>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                Home
+                            </a>
+                        </li>
 
-<footer>
+                        <li class="nav-item">
+                            <a class="nav-link" href="proyectos.html">
+                                Projects
+                            </a>
+                        </li>
 
-    <p>
-        © 2026 Pilar Beckman. All rights reserved.
-    </p>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre-mi.html">
+                                About
+                            </a>
+                        </li>
 
-    <nav>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">
+                                Services
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <article>
+
+                <h1>Contact</h1>
+
+                <p>
+                    Feel free to contact me for collaborations, freelance work or job opportunities.
+                </p>
+
+                <p>
+                    Email:
+                    <a href="mailto:pilarnarb@gmail.com">
+                        pilarnarb@gmail.com
+                    </a>
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 Pilar Beckman. All rights reserved.
+        </p>
 
         <ul>
 
@@ -75,9 +138,9 @@
 
         </ul>
 
-    </nav>
+    </footer>
 
-</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

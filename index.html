@@ -1,358 +1,332 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./styles/styles.css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <title>Pilar Beckman</title>
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <title>Pilar Beckman | Portfolio</title>
 </head>
-
-
 
 <body>
 
+    <!-- HEADER -->
+    <header>
 
-<header>
+        <nav class="navbar navbar-expand-lg">
 
-    <h1 class="logo">
-        PB
-    </h1>
+            <div class="container">
 
-
-    <nav>
-
-        <ul>
-
-            <li>
-                <a href="./index.html">
-                    Home
+                <!-- LOGO -->
+                <a class="navbar-brand" href="./index.html">
+                    PB
                 </a>
-            </li>
+
+                <!-- BOTÓN HAMBURGUESA -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <!-- MENÚ -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/proyectos.html">
+                                Projects
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/sobre-mi.html">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/servicios.html">
+                                Services
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
 
 
-            <li>
-                <a href="./pages/sobre-mi.html">
+    <!-- MAIN -->
+    <main class="home-grid">
+
+        <!-- FONDO GRID -->
+        <div class="grid-bg"></div>
+
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="glow"></div>
+
+            <article>
+
+                <h1>
+                    Pilar Beckman
+                </h1>
+
+                <h2 class="tag">
+                    UX/UI DESIGNER · FULL STACK DEVELOPER
+                </h2>
+
+                <p>
+                    Creating accessible and engaging digital experiences
+                    through design and technology.
+                </p>
+
+                <a href="./pages/proyectos.html" class="btn">
+                    View Projects
+                </a>
+
+            </article>
+
+        </section>
+
+
+        <!-- FEATURED PROJECTS -->
+        <section class="featured-projects">
+
+            <div class="container">
+
+                <div class="row g-4">
+
+                    <!-- PROJECT 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="project-card">
+
+                            <h2>
+                                ARQA Furniture
+                            </h2>
+
+                            <p>
+                                Website and e-commerce experience for a furniture brand.
+                            </p>
+
+                            <figure>
+
+                                <img
+                                    src="./images/arqa.jpg"
+                                    alt="Homepage of ARQA Furniture website">
+
+                            </figure>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- PROJECT 2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="project-card">
+
+                            <h2>
+                                Salud Clara
+                            </h2>
+
+                            <p>
+                                Mobile application designed to improve healthcare
+                                accessibility for older adults.
+                            </p>
+
+                            <figure>
+
+                                <img
+                                    src="./images/saludclara.jpg"
+                                    alt="Salud Clara mobile application">
+
+                            </figure>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- PROJECT 3 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="project-card">
+
+                            <h2>
+                                PedidosYa Portal
+                            </h2>
+
+                            <p>
+                                UX/UI redesign focused on improving the experience
+                                of merchants and supermarkets.
+                            </p>
+
+                            <figure>
+
+                                <img
+                                    src="./images/pedidosya.jpg"
+                                    alt="PedidosYa Portal redesign">
+
+                            </figure>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about">
+
+            <article>
+
+                <h2>
                     About Me
-                </a>
-            </li>
+                </h2>
+
+                <p>
+                    I'm an advanced Visual Communication Design student at
+                    FADU–UNL with a strong interest in UX/UI design,
+                    accessibility, and digital product development. I recently
+                    completed the postgraduate program
+                    <em>Web Design and User Experience</em>, and I am currently
+                    pursuing Full Stack Development studies at Coderhouse.
+                </p>
+
+            </article>
+
+        </section>
 
 
-            <li>
-                <a href="./pages/proyectos.html">
-                    Projects
-                </a>
-            </li>
+        <!-- SKILLS -->
+        <section class="skills">
+
+            <h2>
+                Skills
+            </h2>
+
+            <ul>
+
+                <li>
+                    UX/UI Design
+                </li>
+
+                <li>
+                    HTML5
+                </li>
+
+                <li>
+                    CSS3
+                </li>
+
+                <li>
+                    Editorial Design
+                </li>
+
+                <li>
+                    Branding
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
 
 
-            <li>
-                <a href="./pages/servicios.html">
-                    Services
-                </a>
-            </li>
-
-
-            <li>
-                <a href="./pages/contacto.html">
-                    Contact
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-
-</header>
-
-
-
-
-
-<main class="home-grid">
-
-
-<div class="grid-bg"></div>
-
-
-
-
-<section class="hero">
-
-
-    <div class="glow"></div>
-
-
-    <article>
-
-
-        <span class="tag">
-
-            UX/UI DESIGNER · FULL STACK DEVELOPER
-
-        </span>
-
-
-
-        <h1>
-            Pilar Beckman
-        </h1>
-
-
-
+    <!-- FOOTER -->
+    <footer>
 
         <p>
-            Creating accessible and engaging digital experiences through design and technology.
+            © 2026 Pilar Beckman. All rights reserved.
         </p>
-
-
-
-
-        <a href="./pages/proyectos.html" class="btn">
-
-            View Projects
-
-        </a>
-
-
-
-    </article>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="featured-projects">
-
-
-    <h2>
-        Featured Projects
-    </h2>
-
-
-
-    <article>
-
-
-        <figure>
-
-
-            <img
-            src="./images/arqa.jpg"
-            alt="Homepage of the ARQA Furniture website.">
-
-
-
-            <figcaption>
-
-                Website for ARQA Furniture.
-
-            </figcaption>
-
-
-
-        </figure>
-
-
-
-
-        <h3>
-            ARQA Furniture
-        </h3>
-
-
-
-
-        <p>
-            UX/UI redesign focused on usability and visual hierarchy.
-        </p>
-
-
-
-    </article>
-
-
-
-</section>
-
-
-
-
-
-
-
-
-<section class="about">
-
-
-    <article>
-
-
-        <h2>
-            About Me
-        </h2>
-
-
-
-        <p>
-
-            I'm an advanced Visual Communication Design student at FADU–UNL with a strong interest in UX/UI design, accessibility, and digital product development. I recently completed the postgraduate program <em>Web Design and User Experience</em>, and I am currently pursuing Full Stack Development studies at Coderhouse.
-
-        </p>
-
-
-
-    </article>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section class="skills">
-
-
-    <h2>
-        Skills
-    </h2>
-
-
-
-    <ul>
-
-
-        <li>
-            UX/UI Design
-        </li>
-
-
-        <li>
-            HTML5
-        </li>
-
-
-        <li>
-            CSS3
-        </li>
-
-
-        <li>
-            Editorial Design
-        </li>
-
-
-        <li>
-            Branding
-        </li>
-
-
-    </ul>
-
-
-
-</section>
-
-
-
-
-
-</main>
-
-
-
-
-
-
-
-<footer>
-
-
-
-    <p>
-
-        © 2026 Pilar Beckman. All rights reserved.
-
-    </p>
-
-
-
 
         <ul>
 
-
-
-
             <li>
-
-
-                <a href="https://www.behance.net/pilinarb4f1b">
+                <a
+                    href="https://www.behance.net/pilinarb4f1b"
+                    aria-label="Behance">
 
                     <i class="fa-brands fa-behance"></i>
 
                 </a>
-
-
             </li>
 
-
-
-
-
             <li>
-
-
-                <a href="https://www.instagram.com/pilinarb/">
+                <a
+                    href="https://www.instagram.com/pilinarb/"
+                    aria-label="Instagram">
 
                     <i class="fa-brands fa-instagram"></i>
 
                 </a>
-
-
             </li>
-
-
-
 
         </ul>
 
+    </footer>
 
 
-
-
-
-</footer>
-
-
-
-
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 </body>
-
 
 </html>

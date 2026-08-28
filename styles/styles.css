@@ -78,6 +78,19 @@ header {
     filter: invert(1);
 }
 
+.navbar-collapse {
+    margin-top: 20px;
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        margin-top: 0;
+    }
+}
 
 /* ============================
    MAIN

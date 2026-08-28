@@ -1,0 +1,45 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.about-page {
+    min-height: calc(100vh - 200px);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 280px;
+
+    img {
+        width: 100%;
+        border-radius: $radius-sm;
+    }
+}
+
+@include responsive(768px) {
+    .about-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-text {
+        width: 60%;
+    }
+
+    .profile-photo {
+        width: 35%;
+        max-width: 350px;
+    }
+}

@@ -1,0 +1,10 @@
+@use "../utilities/variables" as *;
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: $spacing-lg;
+}

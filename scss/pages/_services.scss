@@ -1,0 +1,11 @@
+@use "../utilities/variables" as *;
+
+.service-photo {
+    max-width: 400px;
+    margin-top: $spacing-lg;
+
+    img {
+        width: 100%;
+        border-radius: $radius-sm;
+    }
+}

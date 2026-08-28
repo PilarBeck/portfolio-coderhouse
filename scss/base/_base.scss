@@ -1,0 +1,53 @@
+@use "../utilities/variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-main;
+    background: $background;
+    color: $text;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 80px 8%;
+    position: relative;
+    z-index: 2;
+}
+
+p {
+    color: $text-secondary;
+}
+
+figure {
+    margin: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: $radius-sm;
+        display: block;
+    }
+}
+
+figcaption {
+    margin-top: $spacing-sm;
+    color: $text-secondary;
+}

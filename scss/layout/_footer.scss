@@ -1,0 +1,20 @@
+@use "../utilities/variables" as *;
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    padding: $spacing-xl;
+
+    ul {
+        margin-top: $spacing-md;
+        display: flex;
+        justify-content: center;
+        gap: $spacing-md;
+        list-style: none;
+    }
+
+    a {
+        color: $text;
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,46 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.navbar {
+    padding: 24px 0;
+}
+
+.navbar-brand {
+    color: $text;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    color: $text;
+    font-weight: 500;
+    transition: $transition;
+
+    &:hover,
+    &:focus {
+        color: $accent;
+    }
+}
+
+.navbar-toggler {
+    border-color: $text;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.navbar-collapse {
+    margin-top: $spacing-md;
+}
+
+.navbar-nav {
+    gap: $spacing-sm;
+}
+
+@include responsive(992px) {
+    .navbar-collapse {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,138 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero"
+        "featured"
+        "about"
+        "skills";
+    gap: $spacing-md;
+}
+
+.grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+        );
+    background-size: 50px 50px;
+    z-index: 0;
+}
+
+.hero {
+    grid-area: hero;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $spacing-xl 8%;
+    position: relative;
+    overflow: hidden;
+
+    article {
+        width: 100%;
+        max-width: 650px;
+        position: relative;
+        z-index: 1;
+    }
+
+    h1 {
+        font-size: clamp(2.3rem, 6vw, 4rem);
+        margin: $spacing-md 0;
+    }
+
+    p {
+        font-size: 1.2rem;
+        max-width: 500px;
+    }
+}
+
+.tag {
+    color: $accent;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.glow {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: $accent;
+    border-radius: 50%;
+    filter: blur(250px);
+    opacity: 0.25;
+    top: 50px;
+    right: -150px;
+    z-index: 0;
+}
+
+.about {
+    grid-area: about;
+}
+
+.skills {
+    grid-area: skills;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        list-style: none;
+    }
+
+    li {
+        background: $surface;
+        padding: $spacing-sm 18px;
+        border-radius: $radius-lg;
+    }
+}
+
+.projects {
+    padding: 80px 8%;
+}
+
+.projects-container {
+    width: 100%;
+}
+
+@include responsive(768px) {
+    .hero {
+        min-height: calc(100vh - 90px);
+
+        h1 {
+            font-size: 3.2rem;
+        }
+    }
+}
+
+@include responsive(1024px) {
+    .home-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "hero hero"
+            "featured about"
+            "skills skills";
+        gap: $spacing-lg;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+    }
+
+    .featured-projects article {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}

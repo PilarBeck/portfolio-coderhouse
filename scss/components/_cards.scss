@@ -1,0 +1,30 @@
+@use "../utilities/variables" as *;
+
+.featured-projects {
+    grid-area: featured;
+
+    .row {
+        width: 100%;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $spacing-md;
+        background: $surface;
+        padding: 25px;
+        border-radius: $radius-md;
+        height: 100%;
+    }
+}
+
+.project-card {
+    background: $surface;
+    padding: 25px;
+    border-radius: $radius-md;
+
+    img {
+        width: 100%;
+        border-radius: $radius-sm;
+    }
+}

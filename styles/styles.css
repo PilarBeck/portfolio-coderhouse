@@ -78,6 +78,19 @@ header {
     filter: invert(1);
 }
 
+.navbar-collapse {
+    margin-top: 20px;
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        margin-top: 0;
+    }
+}
 
 /* ============================
    MAIN
@@ -350,29 +363,9 @@ figcaption {
 }
 
 .projects-container {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 30px;
-
-    grid-template-areas:
-        "project1"
-        "project2"
-        "project3";
+    width: 100%;
 }
 
-.project-card:nth-child(1) {
-    grid-area: project1;
-}
-
-.project-card:nth-child(2) {
-    grid-area: project2;
-}
-
-.project-card:nth-child(3) {
-    grid-area: project3;
-}
 
 .project-card {
     background: var(--surface);
@@ -393,9 +386,29 @@ figcaption {
    PÁGINA ABOUT
 ============================ */
 
+/* ============================
+   PÁGINA ABOUT
+============================ */
+
+.about-page {
+    min-height: calc(100vh - 200px);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
 .profile-photo {
+    width: 100%;
     max-width: 280px;
-    margin-top: 30px;
 }
 
 .profile-photo img {
@@ -403,6 +416,24 @@ figcaption {
     border-radius: 12px;
 }
 
+@media (min-width: 768px) {
+
+    .about-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-text {
+        width: 60%;
+    }
+
+    .profile-photo {
+        width: 35%;
+        max-width: 350px;
+    }
+
+}
 
 /* ============================
    PÁGINA SERVICES
@@ -464,13 +495,6 @@ footer a {
         font-size: 3.2rem;
     }
 
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-
-        grid-template-areas:
-            "project1 project2"
-            "project3 project3";
-    }
 
 }
 
@@ -496,12 +520,6 @@ footer a {
         font-size: clamp(2.5rem, 6vw, 4rem);
     }
 
-    .projects-container {
-        grid-template-columns: repeat(3, 1fr);
-
-        grid-template-areas:
-            "project1 project2 project3";
-    }
 
     .featured-projects article {
         grid-template-columns: 1fr 1fr;

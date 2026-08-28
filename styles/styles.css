@@ -363,29 +363,9 @@ figcaption {
 }
 
 .projects-container {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 30px;
-
-    grid-template-areas:
-        "project1"
-        "project2"
-        "project3";
+    width: 100%;
 }
 
-.project-card:nth-child(1) {
-    grid-area: project1;
-}
-
-.project-card:nth-child(2) {
-    grid-area: project2;
-}
-
-.project-card:nth-child(3) {
-    grid-area: project3;
-}
 
 .project-card {
     background: var(--surface);
@@ -477,13 +457,6 @@ footer a {
         font-size: 3.2rem;
     }
 
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-
-        grid-template-areas:
-            "project1 project2"
-            "project3 project3";
-    }
 
 }
 
@@ -509,12 +482,6 @@ footer a {
         font-size: clamp(2.5rem, 6vw, 4rem);
     }
 
-    .projects-container {
-        grid-template-columns: repeat(3, 1fr);
-
-        grid-template-areas:
-            "project1 project2 project3";
-    }
 
     .featured-projects article {
         grid-template-columns: 1fr 1fr;

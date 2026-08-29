@@ -1,15 +1,20 @@
 @use "../utilities/variables" as *;
 
-.btn {
+%button-base {
     display: inline-block;
     margin-top: $spacing-lg;
-    background: $accent;
-    color: $background;
     padding: 14px 28px;
     border-radius: $radius-sm;
     text-decoration: none;
     font-weight: 600;
     transition: $transition;
+}
+
+.btn {
+    @extend %button-base;
+
+    background: $accent;
+    color: $background;
 
     &:hover {
         transform: translateY(-5px);

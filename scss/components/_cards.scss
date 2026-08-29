@@ -1,5 +1,46 @@
 @use "../utilities/variables" as *;
 
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.about-image {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.about-content article {
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-image {
+        width: 220px;
+    }
+
+    .about-content article {
+        text-align: center;
+    }
+}
+
+
 .featured-projects {
     grid-area: featured;
 
@@ -7,24 +48,37 @@
         width: 100%;
     }
 
-    article {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: $spacing-md;
-        background: $surface;
-        padding: 25px;
-        border-radius: $radius-md;
-        height: 100%;
+    .row > div {
+        display: flex;
     }
 }
 
 .project-card {
+    width: 100%;
+    height: 100%;
     background: $surface;
     padding: 25px;
     border-radius: $radius-md;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    figure {
+        margin-top: auto;
+    }
 
     img {
         width: 100%;
+        height: auto;
         border-radius: $radius-sm;
+        display: block;
     }
 }
